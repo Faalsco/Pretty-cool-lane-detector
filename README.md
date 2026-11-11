@@ -22,7 +22,7 @@ An image passes if the worse of its two detected lines is within 25 px of the tr
 
 ### What explains pass or fail
 
-![Feature importance](images/feature_importance.png)
+![Feature importance](feature_importance.png)
 
 A random forest was trained to predict pass/fail from five scene features. Line contrast, meaning how much brighter the true line is than the road beside it, matters more than three times as much as any other feature. Edge density comes second, which matches the clutter failures. Brightness matters least.
 
@@ -30,25 +30,25 @@ On held-out images the forest reaches a balanced accuracy of about 81% (chance i
 
 ### Line contrast
 
-![Pass rate and error vs line contrast](images/error_vs_line_contrast.png)
+![Pass rate and error vs line contrast](error_vs_line_contrast.png)
 
 The pass rate stays under 10% while the line is less than about 15 grey levels brighter than the road, then climbs to about 61% in the highest-contrast tenth of images.
 
 ### Brightness
 
-![Pass rate and error vs brightness](images/error_vs_brightness.png)
+![Pass rate and error vs brightness](error_vs_brightness.png)
 
 Brightness has a weak effect. The pass rate drifts down from about 18% to about 7% in the brightest tenth of images, where glare washes out the road surface.
 
 ### Curvature
 
-![Pass rate and error vs curvature](images/error_vs_curvature.png)
+![Pass rate and error vs curvature](error_vs_curvature.png)
 
 No clear trend. Inside the short strip of road the detector looks at, most lanes are close to straight.
 
 ### What failure looks like
 
-![Worst failures](images/worst_failures.png)
+![Worst failures](worst_failures.png)
 
 Green is the true line, orange is the detector's. The detector locks onto the vehicle ahead, diamond markings painted in the lane, and kerbs. In many panels its two lines cross, which real lane lines never do.
 
