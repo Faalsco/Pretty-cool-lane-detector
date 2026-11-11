@@ -16,7 +16,7 @@ The detector is not the point of this project. The point is the analysis: measur
 
 ### Pass rate per category
 
-![Pass rate per category](images/pass_rate_per_category.png)
+![Pass rate per category](pass_rate_per_category.png)
 
 An image passes if the worse of its two detected lines is within 25 px of the true line. The "noline" category passes 2%, as expected for a method that can only find paint.
 
